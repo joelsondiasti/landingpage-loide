@@ -42,8 +42,8 @@
     }
 
     .campanha{
-        width: 510px;
-        height: 350px;
+        width: 400px;
+        height: 280px;
         z-index: 10;
         object-fit: cover;
         object-position: -10px;
@@ -51,7 +51,7 @@
 
 
     .logo{
-        width: 40%;
+        width: 35%;
         top: 20px;
         z-index: 15;
     }
@@ -88,9 +88,14 @@
     }
 }
 
-@media only screen 
-    and (min-width: 452px)
-    and (max-width: 480px){
+@media only screen and (max-width: 540px){
+    .campanha{
+        width: 390px;
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 480px){
         #wrapper{
             width: 100%;
             max-width: 425px;
@@ -99,18 +104,32 @@
             padding: 0;
         }
 
+        .logo{
+            width: 50%;
+        }
+
         .campanha{
-            width: 375px;
-            height: 270px;
+            width: 350px;
+            height: 237px;
             z-index: 10;
             object-fit: cover;
-            object-position: -10px;
+            object-position: -5px;
+        }
+
+
+        #right{
+            max-width: 400px;
+            margin: 0 auto;
+            z-index: 20;
+            margin-top: 10px;
+        }
+
+        #contacts h1{
+            margin-bottom: 0;
         }
     }
 
-@media only screen 
-    and (min-width:360px) 
-    and (max-width:375px) {
+@media only screen and (max-width:375px) {
   
         body{
         display: block; 
