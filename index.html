@@ -1,0 +1,220 @@
+<!-- TODO: Testar envio para o backend -->
+<!-- TODO: Criar janela Modal do termo de responsabilidade  -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./styles/main.css" />
+	<link rel="stylesheet" href="./styles/mobile.css" />
+	<title>Matrícula 2022</title>
+	<script src="./js/masks.js" defer></script>
+	<script src="./js/lightbox.js" defer></script>
+	<script src="./js/devhelper.js" defer></script>
+
+	<script src="./js/index.js" defer></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+	<!-- <div id="devHelper">
+		<p>Window Size: <span class="window-size"></span></p>
+		<p>Screen Size: <span class="screen-size"></span></p>
+	
+	</div> -->
+	<div id="lightbox">
+
+		<div id="success-message">
+			<i data-feather="check-circle"></i>
+			<h2>Enviado com sucesso!</h2>
+			<span>Em breve nossa equipe entrará em contato.</span>
+		</div>
+
+		
+		<div id="error-message">
+			<i data-feather="alert-circle"></i>
+			<h2>Erro ao enviar</h2>
+			<span>Por favor, tente novamente</span>
+		</div>
+
+		<div id="lightcontent">
+			<div><button id="exitIcon"><i data-feather="x"></button></i></div>
+			<span>
+				Este termo tem por objetivo registrar a manifestação livre e informada
+				pela qual o titular concorda com o tratamento de seus dados pessoais
+				para finalidade específica, em conformidade com a Lei nº 13.709 – Lei
+				Geral de Proteção de Dados Pessoais (LGPD). Informamos que coletamos
+				seus dados pessoais (nome, filiação, documentos como CPF ou
+				Identidade, endereço, e-mail, além de outros que são solicitados) para
+				utilização em possível prestação de serviços educacionais por nossa
+				Instituição de Ensino. Tais usos podem compreender a manutenção de
+				cadastros de alunos e seus responsáveis, prospecção de potenciais
+				alunos, controle no processo de concessão de bolsas filantrópicas ou
+				descontos comerciais. Como titular de dados, você poderá solicitar
+				mais informações sobre como é realizado o tratamento de seus dados,
+				além de requisitar operações como atualização, correção, eliminação ou
+				revogação do consentimento, nos termos da Lei. <br />Estas solicitações ou
+				requisições devem ser realizadas através do telefone (21) 2671-1578 ou por e-mail secretaria@loidemartha.com.br.
+			</span>
+			<button id="exitBtn">Fechar</button>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="container">
+			<div id="left">
+				<div id="left-contain">
+					<img class="logo" src="./img/LoideCometa.png" alt="" />
+					<img class="campanha" src="./img/logo.png" alt="" />
+					<div id="contacts">
+						<h1>Matrículas Abertas 2022</h1>
+						<span>Telefone: 21 2671-1578 </span>
+						<span>Whatsapp: 21 97904-1346 </span>
+						<span>Email: secretaria@loidemartha.com.br</span>
+					</div>
+				</div>
+			</div>
+			<div id="right">
+				<section id="form-lead">
+					<!-- <h1>Preencha o formulário abaixo e <br/> <span>receba condições especiais:</span> </h1> -->
+					<form id="form-captacao">
+						<h1 class="tablet-only">
+							Preencha o formulário abaixo e <span>receba condições especiais:</span>
+						</h1>
+						<h1>
+							Preencha o formulário abaixo e <br />
+							<span>receba condições especiais:</span>
+						</h1>
+						
+
+						<div class="form-group">
+							<label for="id_responsavel_nome"> Nome do Responsável </label>
+							<input type="text" name="responsavel_nome" maxlength="100" class="form-control input-res"
+								id="id_responsavel_nome" placeholder="Nome do Responsável" required />
+						</div>
+
+						<div class="form-group">
+							<label for="id_nome">Nome do Aluno</label>
+							<input type="text" name="nome" maxlength="100" id="id_nome" placeholder="Nome do Aluno" required />
+						</div>
+
+						<div class="form-group">
+							<label for="telefone_celular" class="font-weight-bold">Telefone (de preferência celular com
+								WhatsApp)</label>
+							<input type="text" inputmode="numeric" name="telefone_celular" placeholder="(xx) xxxxx-xxxx" maxlength="15" id="id_telefone_celular" data-mask="phone" required/>
+						</div>
+						<div class="form-group">
+							<label for="id_email"> E-mail </label>
+							<input type="text" inputmode="email" name="email" placeholder="exemplo@email.com.br" maxlength="100" id="id_email" />
+						</div>
+						<div class="form-group">
+							<label for="curso" class="font-weight-bold">Curso de interesse:</label>
+							<select name="curso" id="curso" required>
+								<option style="display: none;"></option>
+								<option value="Educação Infantil - Jardim I">
+									Educação Infantil - Jardim I
+								</option>
+								<option value="Educação Infantil - Jardim II">
+									Educação Infantil - Jardim II
+								</option>
+								<option value="Ensino Fundamental I - 1º Ano">
+									Ensino Fundamental I - 1º Ano
+								</option>
+								<option value="Ensino Fundamental I - 2º Ano">
+									Ensino Fundamental I - 2º Ano
+								</option>
+								<option value="Ensino Fundamental I - 3º Ano">
+									Ensino Fundamental I - 3º Ano
+								</option>
+								<option value="Ensino Fundamental I - 4º Ano">
+									Ensino Fundamental I - 4º Ano
+								</option>
+								<option value="Ensino Fundamental I - 5º Ano">
+									Ensino Fundamental I - 5º Ano
+								</option>
+								<option value="Ensino Fundamental II - 6º Ano">
+									Ensino Fundamental II - 6º Ano
+								</option>
+								<option value="Ensino Fundamental II - 7º Ano">
+									Ensino Fundamental II - 7º Ano
+								</option>
+								<option value="Ensino Fundamental II - 8º Ano">
+									Ensino Fundamental II - 8º Ano
+								</option>
+								<option value="Ensino Fundamental II - 9º Ano">
+									Ensino Fundamental II - 9º Ano
+								</option>
+								<option value="Ensino Médio - 1ª Série">
+									Ensino Médio - 1ª Série
+								</option>
+								<option value="Ensino Médio - 2º Série">
+									Ensino Médio - 2º Série
+								</option>
+								<option value="Ensino Médio - 3º Série">
+									Ensino Médio - 3º Série
+								</option>
+								<option value="Pós Médio -Técnico em Enfermagem.">
+									Pós Médio -Técnico em Enfermagem.
+								</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="id_escola_origem_nome" class="font-weight-bold">
+								Instituição de Origem
+							</label>
+							<input type="text" name="escola_origem_nome" maxlength="100" class="form-control"
+								id="id_escola_origem_nome" placeholder="Nome da instituição "/>
+						</div>
+						<div class="form-group">
+							<label for="" class="font-weight-bold">
+								Como ficou sabendo da nossa instituição?
+							</label>
+							<select name="lead_id" id="lead_id" class="form-control" required>
+								<option></option>
+								<option style="display: none;"></option>
+								<option value="Eventos">Eventos</option>
+								<option value="Indicação de amigos ou parentes">
+									Indicação de amigos ou parentes
+								</option>
+								<option value="Jornal">Jornal</option>
+								<option value="Outdoor">Outdoor</option>
+								<option value="Panfleto">Panfleto</option>
+								<option value="Redes sociais (Facebook, Instagram ou Twitter)">
+									Redes sociais (Facebook, Instagram ou Twitter)
+								</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<span>
+								<!-- <input
+                    class="select_termo"
+                    name="termo_consentimento"
+                    id="termo_consentimento_campo"
+                    type="checkbox"
+                  />
+                  Eu concordo com os termos de uso para a informação fornecida
+                  (ver termo de consentimento) -->
+
+								Ao enviar eu concordo com os termos de uso para a informação
+								fornecida (<a id="termo">ver termo de consentimento</a>)
+							</span>
+						</div>
+
+						<button id="submit" class="btn btn-success" type="submit">
+							Enviar
+						</button>
+					</form>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script>
+		feather.replace();
+	</script>
+</body>
+
+</html>
