@@ -35,8 +35,8 @@ form.addEventListener("submit", event =>{
         reqBody.telefone_celular.replace(/\D/g, "")
 
 
-    const url = "http://localhost:3000/capture"
-    //const url = "https://capturebox-loide.herokuapp.com/capture"
+    //const url = "http://localhost:3000/capture"
+    const url = "https://capturebox-loide.herokuapp.com/capture"
     const fetchData = {
         method: "POST",
         headers: {
