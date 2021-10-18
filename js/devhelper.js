@@ -6,10 +6,7 @@ function css(element, style) {
 const sizeOfThings = () => {
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
-    var orientation = screen.orientation;
-    console.log("🚀 ~ file: devhelper.js ~ line 10 ~ sizeOfThings ~ orientation", orientation)
-
-    
+    var orientation = screen.orientation;    
     
     var screenWidth = screen.width;
     var screenHeight = screen.height;   

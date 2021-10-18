@@ -30,6 +30,7 @@ select{
     background-color: #fff;
     background-size: 12px;
     background-position: calc(100% - 20px) center;
+    color: #777;
 }
 
 label {
@@ -168,7 +169,7 @@ body {
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr;
   width: 100%;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 #left{
@@ -189,7 +190,7 @@ body {
     width: 600px;
 }
 
-.tablet-only{
+.tablet-only, .only-mobile{
     display: none;
 }
 

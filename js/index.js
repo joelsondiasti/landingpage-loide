@@ -20,6 +20,25 @@ var aluno = document.querySelector('input[name="nome"]');
 var telefone = document.querySelector('input[name="telefone_celular"]');
 var email = document.querySelector('input[name="email"]');
 var escola = document.querySelector('input[name="escola_origem_nome"]');
+var curso = document.querySelector('select[name="curso"]');
+var leadOrigin = document.querySelector('select[name="lead_id"]');
+
+
+curso.addEventListener('change', ()=>{
+    if(curso.value === curso[0].value){
+        curso.style.color = '#777'
+    } else {
+        curso.style.color = '#000'
+    }
+})
+
+leadOrigin.addEventListener('change', ()=>{
+    if(leadOrigin.value === leadOrigin[0].value){
+        leadOrigin.style.color = '#777'
+    } else {
+        leadOrigin.style.color = '#000'
+    }
+})
 
 // responsavel.value = "Joe"
 // aluno.value="Aluno"
