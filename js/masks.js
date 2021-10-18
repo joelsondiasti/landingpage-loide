@@ -1,3 +1,4 @@
+// RegEx - Regular Expression
 const mask = {
   phone: (value) => {
     return value
