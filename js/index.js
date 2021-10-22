@@ -23,6 +23,8 @@ var escola = document.querySelector('input[name="escola_origem_nome"]');
 var curso = document.querySelector('select[name="curso"]');
 var leadOrigin = document.querySelector('select[name="lead_id"]');
 
+var button = document.getElementById("submit");
+
 
 curso.addEventListener('change', ()=>{
     if(curso.value === curso[0].value){
@@ -48,6 +50,8 @@ leadOrigin.addEventListener('change', ()=>{
 
 form.addEventListener("submit", event =>{
     event.preventDefault(); 
+    button.innerHTML= "Aguarde..."
+    button.style.backgroundColor = "#29a844"
     var data = new FormData(event.target);
     var reqBody = Object.fromEntries(data); 
     reqBody.telefone_celular = 
@@ -73,6 +77,8 @@ form.addEventListener("submit", event =>{
     })
     .catch(err=> {
         console.error(err)
+        button.innerHTML= "Enviar"
+        button.style.backgroundColor = "#46ce64"
         lightbox.style.display = "flex";
         error.style.display = "flex";
         setTimeout(()=> {
